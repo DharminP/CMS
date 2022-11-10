@@ -1,4 +1,5 @@
 using CMSAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -36,17 +37,21 @@ public class PolicyController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize]
     public List<Policy> CreateNewPolicy(Policy policy)
     {
         return _iPolicyRepository.CreatePolicy(policy);
     }
     
     [HttpPut]
+    [Authorize]
     public List<Policy> UpdatePolicy(Policy policy)
     {
         return _iPolicyRepository.UpdatePolicy(policy);
     }
+    
     [HttpDelete("{pid:int}")]
+    [Authorize]
     public List<Policy> DeletePolicy(int pid)
     {
         return _iPolicyRepository.DeletePolicy(pid);
