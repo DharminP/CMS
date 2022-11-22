@@ -12,7 +12,16 @@ public class PolicyRepository : IPolicyRepository
             pname = "GMCPolicy1",
             ptype = "GMC",
             pgrade = 12,
-            pstatus = "A"
+            pstatus = "Active",
+            pCoverage = 10000,
+            pdesc = "This is policy description.",
+            pdesc_short = "This is short description.",
+            pPremium = 1000,
+            gender = "M",
+            insurer = "HDFC",
+            members = "Spouse",
+            ageGroup = "30"
+
         });
         _Policies.Add(new Policy
         {
@@ -20,7 +29,15 @@ public class PolicyRepository : IPolicyRepository
             pname = "GPAPolicy1",
             ptype = "GPA",
             pgrade = 11,
-            pstatus = "A"
+            pstatus = "Active",
+            pCoverage = 10000,
+            pdesc = "This is policy description.",
+            pdesc_short = "This is short description.",
+            pPremium = 1000,
+            gender = "M",
+            insurer = "ICICI",
+            members = "Spouse",
+            ageGroup = "30"
         });
         _Policies.Add(new Policy
         {
@@ -28,7 +45,15 @@ public class PolicyRepository : IPolicyRepository
             pname = "GTLPolicy1",
             ptype = "GTL",
             pgrade = 10,
-            pstatus = "A"
+            pstatus = "Active",
+            pCoverage = 10000,
+            pdesc = "This is policy description.",
+            pdesc_short = "This is short description.",
+            pPremium = 1000,
+            gender = "M",
+            insurer = "HDFC",
+            members = "Child",
+            ageGroup = "30"
         });
         _Policies.Add(new Policy
         {
@@ -36,7 +61,15 @@ public class PolicyRepository : IPolicyRepository
             pname = "GTLPolicy2",
             ptype = "GTL",
             pgrade = 1,
-            pstatus = "A"
+            pstatus = "Active",
+            pCoverage = 10000,
+            pdesc = "This is policy description.",
+            pdesc_short = "This is short description.",
+            pPremium = 1000,
+            gender = "M",
+            insurer = "ICICI",
+            members = "Spouse",
+            ageGroup = "30"
         });
     }
     public List<Policy> CreatePolicy(Policy policy)
@@ -64,7 +97,7 @@ public class PolicyRepository : IPolicyRepository
 
     public List<Policy> GetPolicies()
     {
-        return _Policies;
+        return _Policies.OrderBy(x=>x.pstatus).ToList();
     }
 
     public Policy GetPolicyById(int pid)
@@ -85,6 +118,15 @@ public class PolicyRepository : IPolicyRepository
             _Policies[i].pname = policy.pname;
             _Policies[i].ptype = policy.ptype;
             _Policies[i].pgrade = policy.pgrade;
+            _Policies[i].pstatus = policy.pstatus;
+            _Policies[i].pCoverage = policy.pCoverage;
+            _Policies[i].pdesc = policy.pdesc;
+            _Policies[i].pdesc_short = policy.pdesc_short;
+            _Policies[i].pPremium = policy.pPremium;
+            _Policies[i].gender = policy.gender;
+            _Policies[i].insurer = policy.insurer;
+            _Policies[i].members = policy.members;
+            _Policies[i].ageGroup = policy.ageGroup;
         }
         return _Policies;
     }

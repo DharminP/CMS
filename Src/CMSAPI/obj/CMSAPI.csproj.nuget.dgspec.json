@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\VSCODE\\POC\\Microservices\\CMS\\Src\\CMSAPI\\CMSAPI.csproj": {}
+    "C:\\Project\\Github_POC\\CMS\\Src\\CMSAPI\\CMSAPI.csproj": {}
   },
   "projects": {
-    "C:\\VSCODE\\POC\\Microservices\\CMS\\Src\\CMSAPI\\CMSAPI.csproj": {
+    "C:\\Project\\Github_POC\\CMS\\Src\\CMSAPI\\CMSAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VSCODE\\POC\\Microservices\\CMS\\Src\\CMSAPI\\CMSAPI.csproj",
+        "projectUniqueName": "C:\\Project\\Github_POC\\CMS\\Src\\CMSAPI\\CMSAPI.csproj",
         "projectName": "CMSAPI",
-        "projectPath": "C:\\VSCODE\\POC\\Microservices\\CMS\\Src\\CMSAPI\\CMSAPI.csproj",
-        "packagesPath": "C:\\Users\\dharmin.patel\\.nuget\\packages\\",
-        "outputPath": "C:\\VSCODE\\POC\\Microservices\\CMS\\Src\\CMSAPI\\obj\\",
+        "projectPath": "C:\\Project\\Github_POC\\CMS\\Src\\CMSAPI\\CMSAPI.csproj",
+        "packagesPath": "C:\\Users\\i.af.khan\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\Github_POC\\CMS\\Src\\CMSAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dharmin.patel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\i.af.khan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -51,7 +55,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -63,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
